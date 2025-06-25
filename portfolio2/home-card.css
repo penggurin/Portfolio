@@ -1,0 +1,156 @@
+.jp-green{
+  color: rgb(58, 124, 58);
+}
+
+.home-card {
+  margin: 100px auto;
+  padding: 2.5em 3vw;
+  display: flex;
+  justify-content: center;   /* Center the whole flex row */
+  align-items: center;       /* Vertically center items */
+  gap: 56px;                 /* Space between image and right side */
+  position: relative;
+  z-index: 10;
+}
+
+.home-card h1{
+  color: rgb(58, 124, 58);
+  font-size: 4em;
+  font-weight: 600;
+  line-height: 0.1;
+}
+
+.home-card h2{
+  color: #e4f7ff;
+  font-size: 2em;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+  line-height: 0.5;
+}
+
+.home-card h3{
+  color: rgb(182, 181, 181);
+  line-height: 0.5;
+}
+
+.home-card p{
+  font-size: 1.15rem;
+  color: #cbcbcb;
+  margin-bottom: 2.8rem;
+  line-height: 1.6;
+}
+
+.home-card button{
+  font-size: 1.3em;
+  margin: 30px 10px;
+  padding: 0.4em 1.4em;
+  cursor: pointer;
+  border-radius: 2em;
+  font-weight: 700;
+  width: 180px;
+  transition: background 0.18s, color 0.18s, transform 0.14s, box-shadow 0.15s;
+  box-shadow: 0 2px 12px 0 rgba(58,124,58,0.07);
+}
+
+.home-card button:active {
+  transform: scale(0.97);
+}
+
+.btn1 {
+  background: rgb(58, 124, 58);
+  color: #e4f7ff;
+  border: none;
+  font-size: 1em;
+}
+
+.btn1:hover,
+.btn1:focus {
+  background: #7bca7b;
+  color: #2a2a2a;
+  box-shadow: 0 8px 28px 0 rgba(58,124,58,0.17);
+}
+
+.btn2 {
+  background-color: transparent;
+  color: rgb(58, 124, 58);
+  border: 2px solid rgb(58, 124, 58);
+  font-size: 1em;
+}
+
+.btn2:hover,
+.btn2:focus {
+  background-color: rgb(58, 124, 58);
+  color: #e4f7ff;
+  box-shadow: 0 6px 24px 0 rgba(58,124,58,0.13);
+}
+
+.home-card img{ 
+  height: 500px;
+  border-radius: 45%;
+  font-size: 1.2em;
+  color: #dedede;
+  box-shadow: 2px 10px 10px 0 rgba(50,200,120,0.12);
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Responsive Styling */
+@media (max-width: 1120px) {
+  .home-card {
+    flex-direction: column;
+    gap: 32px;
+    padding: 4em 2vw;
+    margin-top: 40px;
+  }
+  .home-card img {
+    height: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-card {
+    padding: 1.1em 0.3em;
+    gap: 15px;
+  }
+  .home-card img {
+    height: 160px;
+    border-radius: 35%;
+  }
+  .home-content {
+    min-width: unset;
+    padding: 0 2vw;
+  }
+  .home-card h1 {
+    font-size: 2em;
+  }
+  .home-card h2 {
+    font-size: 1.15em;
+  }
+  .home-card p {
+    font-size: 1em;
+  }
+  .home-card button {
+    width: 98vw;
+    max-width: 260px;
+    font-size: 1em;
+    margin: 16px 0;
+    padding: 0.5em 0.2em;
+  }
+}
+
+/* For button layout on very small screens */
+@media (max-width: 500px) {
+  .home-card button {
+    width: 90vw;
+    max-width: 180px;
+    font-size: 0.95em;
+    margin: 12px 0;
+    padding: 0.4em 0.2em;
+  }
+}

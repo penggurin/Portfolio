@@ -1,0 +1,94 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(0.5px);
+  border-bottom: 1px solid #222;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.04);
+}
+
+.navbar-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 12px;
+}
+
+.navbar-logo img {
+  height: 36px;
+  width: 36px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #222;
+}
+
+.navbar-brand {
+  font-size: 1.45rem;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.navbar-brand-bold {
+  color: #fff;
+  font-weight: 700;
+}
+
+.navbar-brand-accent {
+  color: rgb(58, 124, 58);
+  font-weight: 700;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 42px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: #e3e3e3;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 500;
+  transition: color 0.18s;
+  letter-spacing: 0.3px;
+  padding: 2px 0;
+}
+
+.navbar-links a:hover,
+.navbar-links a:focus {
+  color: rgb(58, 124, 58);
+  border-bottom: 2px solid rgb(58, 124, 58);
+}
+
+@media (max-width: 800px) {
+  .navbar-content {
+    padding: 0 16px;
+  }
+  .navbar-links {
+    gap: 24px;
+  }
+  .navbar-logo img {
+    height: 30px;
+    width: 30px;
+  }
+  .navbar-brand {
+    font-size: 1.12rem;
+  }
+}
