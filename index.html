@@ -5,126 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-     <link href="https://fonts.googleapis.com/css?family=Poppins:700,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="about-card.css">
-  <link rel="stylesheet" href="home-card.css">
-  <link rel="stylesheet" href="contact-card.css">
-  <link rel="stylesheet" href="projects-card.css">
-  <link rel="stylesheet" href="footer.css">
-  <link rel="stylesheet" href="navigation.css">
-  <link rel="icon" href="logo-white.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Poppins:700,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="about-card.css">
+    <link rel="stylesheet" href="home-card.css">
+    <link rel="stylesheet" href="contact-card.css">
+    <link rel="stylesheet" href="projects-card.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="icon" href="logo-white.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
   <canvas id="container"></canvas>
 
-<nav class="navbar">
-  <div class="navbar-content">
-    <a href="#" class="navbar-logo">
-      <img src="logo-white.png" alt="Logo" />
-      <span class="navbar-brand">
-        <span class="navbar-brand-bold">penggurin</span>
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a class="navbar-logo" href="/">
+        <img src="logo-white.png" alt="Logo">
+        <span class="navbar-brand">
+          <span class="navbar-brand-bold">Brand</span>
+          <span class="navbar-brand-accent">Name</span>
+        </span>
+      </a>
+      <button class="navbar-hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="navbar-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HOME SECTION -->
+  <div class="home-card" id="home">
+    <div class="left-side">
+      <img src="main.jpg">
+    </div>
+    <div class="home-content">
+      <h2>Hello, I'm</h2>
+      <h1>Jp Roxas</h1>
+      <h3><i class="fa-solid fa-location-dot"></i> Quezon City, Philippines</h3>
+      <span>
+        <button class="btn2">Resume/CV</button>
+        <button class="btn2">Contact</button>
+        <button class="btn2">Projects</button>
       </span>
-    </a>
-    <ul class="navbar-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
+    </div>
   </div>
-</nav>
-    <div class="home-card">
-    <div class = "left-side">
-    <img src = "main.jpg">
-    </div>
-    
-    <div class ="home-content">
-    <h2>Hello, I'm</h2>
-    <h1>Jp Roxas</h1>
-    <h3><i class="fa-solid fa-location-dot"></i> Quezon City, Philippines</h3>
-    <span>
-    <button class = "btn2">Resume/CV</button>
-    <button class = "btn2">Contact</button>
-    <button class = "btn2">Projects</button>
-    </span>
-    </div>
 
+  <!-- ABOUT SECTION -->
+  <div class="about-section" id="about">
+    <h1 class="about-title">About</h1>
+    <div class="about-main-card">
+      <p class="about-summary">
+        Hi! I am <b>Jean Piere Roxas</b> from <b>Quezon City, Philippines</b>. I'm a <b>second-year Computer Science</b> student at <b>Quezon City University – San Bartolome Campus</b>. With <b>under a year of coding experience</b>, I focus on building practical skills in <b>Java, HTML, CSS, and JavaScript</b>. I'm passionate about software development and eager to grow through hands-on projects and continuous learning.
+      </p>
+      <div class="about-skills-row">
+        <div class="about-skills-col">
+          <h2>Tech Stacks</h2>
+          <div class="skill-badges">
+            <span class="skill-badge">
+              <span class="icon-circle html">
+                <div class="icon-circle html"><i class="fa-brands fa-html5"></i></div>
+              </span>
+              HTML
+            </span>
+            <span class="skill-badge">
+              <span class="icon-circle css">
+                <div class="icon-circle css"><i class="fa-brands fa-css3-alt"></i></div>
+              </span>
+              CSS
+            </span>
+            <span class="skill-badge">
+              <span class="icon-circle js">
+                <div class="icon-circle js"><i class="fab fa-js"></i></div>
+              </span>
+              JavaScript
+            </span>
+            <span class="skill-badge">
+              <span class="icon-circle github">
+                <div class="icon-circle github"><i class="fab fa-github"></i></div>
+              </span>
+              GitHub
+            </span>
+            <span class="skill-badge">
+              <span class="icon-circle java">
+                <div class="icon-circle java"><i class="fab fa-java"></i></div>
+              </span>
+              Java
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
-
-  <div class="about-section">
-  <h1 class="about-title">About</h1>
-  <div class="about-main-card">
-    <p class="about-summary">
-      Hi! I am <b>Jean Piere Roxas</b> from <b>Quezon City, Philippines</b>. I'm a <b>second-year Computer Science</b> student at <b>Quezon City University – San Bartolome Campus</b>. With <b>under a year of coding experience</b>, I focus on building practical skills in <b>Java, HTML, CSS, and JavaScript</b>. I'm passionate about software development and eager to grow through hands-on projects and continuous learning.
-    </p>
-    <div class="about-skills-row">
-      <div class="about-skills-col">
-        <h2>Tech Stacks</h2>
-    <div class="skill-badges">
-      <span class="skill-badge">
-        <span class="icon-circle html">
-          <div class="icon-circle html"><i class="fa-brands fa-html5"></i></div>
-        </span>
-        HTML
-      </span>
-      <span class="skill-badge">
-        <span class="icon-circle css">
-          <div class="icon-circle css"><i class="fa-brands fa-css3-alt"></i></div>
-        </span>
-        CSS
-      </span>
-      <span class="skill-badge">
-        <span class="icon-circle js">
-          <div class="icon-circle js"><i class="fab fa-js"></i></div>
-        </span>
-        JavaScript
-      </span>
-      <span class="skill-badge">
-        <span class="icon-circle github">
-          <div class="icon-circle github"><i class="fab fa-github"></i></div>
-        </span>
-        GitHub
-      </span>
-      <span class="skill-badge">
-        <span class="icon-circle java">
-          <div class="icon-circle java"><i class="fab fa-java"></i></div>
-        </span>
-        Java
-      </span>
-    </div>
+    <div class="about-cards-row">
+      <div class="about-info-card" id="education">
+        <div class="about-card-header"><span class="about-card-icon"><i class="fa-solid fa-school"></i></span> <span class="about-card-title">Education</span></div>
+        <ul class="about-card-list">
+          <li>
+            <b>Bachelor of Science in Computer Science (BSCS)</b>
+            <br>Quezon City University - San Bartolome 
+            <br>Second Year  (2024-Present) 
+          </li>
+        </ul>
+      </div>
+      <div class="about-info-card" id="work">
+        <div class="about-card-header"><span class="about-card-icon"><i class="fa-solid fa-briefcase"></i></span> <span class="about-card-title">Work Experience</span></div>
+        <ul class="about-card-list">
+          <li>
+            <b>Work 1 (2024)</b>
+            <br>Short Description.
+          </li>
+          <li>
+            <b>Work 2 (2025)</b>
+            <br>Developed and maintained websites for local businesses using modern stacks.
+          </li>
+        </ul>
       </div>
     </div>
   </div>
-  <div class="about-cards-row">
-    <div class="about-info-card" id = "education">
-      <div class="about-card-header"><span class="about-card-icon"><i class="fa-solid fa-school"></i></span> <span class="about-card-title">Education</span></div>
-      <ul class="about-card-list">
-        <li>
-          <b>Bachelor of Science in Computer Science (BSCS)</b>
-          <br>Quezon City University - San Bartolome 
-          <br>Second Year  (2024-Present) 
-        </li>
-      </ul>
-    </div>
-    <div class="about-info-card" id = "work">
-      <div class="about-card-header"><span class="about-card-icon"><i class="fa-solid fa-briefcase"></i></span> <span class="about-card-title">Work Experience</span></div>
-      <ul class="about-card-list">
-        <li>
-          <b>Work 1 (2024)</b>
-          <br>Short Description.
-        </li>
-        <li>
-          <b>Work 2 (2025)</b>
-          <br>Developed and maintained websites for local businesses using modern stacks.
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
 
-  <div class="featured-projects-bg">
+  <!-- PROJECTS SECTION -->
+  <div class="featured-projects-bg" id="projects">
     <div class="featured-projects-container">
       <h1 class="featured-title">
         <span>Projects</span>
@@ -202,61 +209,66 @@
       </div>
     </div>
   </div>
-<div class="contact-page">
-  <h1 class="contact-title">Get In Touch</h1>
-  <div class="contact-container">
-    <div class="contact-info">
-      <h2>Contact Information</h2>
-      <div class="contact-row">
-        <span class="contact-logo">
-          <i class="fas fa-envelope"></i>
-        </span>
-        <div>
-          <span class="contact-label">Email</span><br>
-          <span class="contact-detail">roxas.jeanpiere.ramos@gmail.com</span>
+
+  <!-- CONTACT SECTION -->
+  <div class="contact-page" id="contact">
+    <h1 class="contact-title">Get In Touch</h1>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <div class="contact-row">
+          <span class="contact-logo">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <div>
+            <span class="contact-label">Email</span><br>
+            <span class="contact-detail">roxas.jeanpiere.ramos@gmail.com</span>
+          </div>
+        </div>
+        <div class="contact-row">
+          <span class="contact-logo">
+            <i class="fas fa-phone"></i>
+          </span>
+          <div>
+            <span class="contact-label">Phone</span><br>
+            <span class="contact-detail">0977 738 5081</span>
+          </div>
+        </div>
+        <div class="contact-row">
+          <span class="contact-logo">
+            <i class="fas fa-map-marker-alt"></i>
+          </span>
+          <div>
+            <span class="contact-label">Location</span><br>
+            <span class="contact-detail">Quezon City, Philippines</span>
+          </div>
         </div>
       </div>
-      <div class="contact-row">
-        <span class="contact-logo">
-          <i class="fas fa-phone"></i>
-        </span>
-        <div>
-          <span class="contact-label">Phone</span><br>
-          <span class="contact-detail">0977 738 5081</span>
+      <div class="connect">
+        <h2>Connect With Me</h2>
+        <div class="connect-logos">
+          <a href="https://github.com/penggurin" target="_blank" class="connect-logo"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/jean-piere-roxas-946863335/" target="_blank" class="connect-logo"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/jp.roxas.740281/" target="_blank" class="connect-logo"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/roxas__jp/" target="_blank" class="connect-logo"><i class="fab fa-instagram"></i></a>
         </div>
-      </div>
-      <div class="contact-row">
-        <span class="contact-logo">
-          <i class="fas fa-map-marker-alt"></i>
-        </span>
-        <div>
-          <span class="contact-label">Location</span><br>
-          <span class="contact-detail">Quezon City, Philippines</span>
-        </div>
-      </div>
-    </div>
-    <div class="connect">
-      <h2>Connect With Me</h2>
-      <div class="connect-logos">
-        <a href="https://github.com/penggurin" target="_blank" class="connect-logo"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/jean-piere-roxas-946863335/" target="_blank" class="connect-logo"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.facebook.com/jp.roxas.740281/" target="_blank" class="connect-logo"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/roxas__jp/" target="_blank" class="connect-logo"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
   </div>
-</div>
-<footer class="site-footer">
-  <div class="footer-content">
-    <div class="footer-brand">
-      <i class="fas fa-code"></i>
-      <span>Jp Roxas</span>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <i class="fas fa-code"></i>
+        <span>Jp Roxas</span>
+      </div>
+      <p class="footer-copyright">
+        © 2025 Jp Roxas. All rights reserved.
+      </p>
     </div>
-    <p class="footer-copyright">
-      © 2025 Jp Roxas. All rights reserved.
-    </p>
-  </div>
-</footer>
-<script src = "star.js"></script>
+  </footer>
+  <script src="star.js"></script>
+  <!-- Add your navigation script for smooth scroll and hamburger -->
+  <script src="navigation.js"></script>
 </body>
-</html> 
+</html>

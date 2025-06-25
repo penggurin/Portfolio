@@ -1,8 +1,3 @@
-body {
-  background: #000;
-  font-family: 'Poppins', Arial, sans-serif;
-}
-
 .contact-page {
   width: 100%;
   min-height: 100vh;
@@ -27,7 +22,7 @@ body {
   padding: 2.5em 2.5em;
   width: 92%;
   max-width: 1200px;
-  margin: 0 auto 40px auto;
+  margin: 20px auto 40px auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -133,27 +128,105 @@ body {
   transform: scale(1.1);
 }
 
-@media (max-width: 900px) {
+/* 1120px and below: match section margin/padding to about-section */
+@media (max-width: 1120px) {
   .contact-container {
     flex-direction: column;
     align-items: center;
     min-height: unset;
-    padding: 1.5em 0.5em;
+    padding: 1.5em 1vw;
+    width: 99vw;
+    max-width: 99vw;
+    margin: 24px auto 32px auto;
+    gap: 16px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    margin: 20px;
+  }
+  .contact-title {
+    font-size: 2.1rem;
+    margin-bottom: 28px;
   }
   .contact-info,
   .connect {
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
     align-items: center;
     text-align: center;
+    padding: 0;
   }
   .contact-info h2,
   .connect h2 {
+    font-size: 1.4rem;
     text-align: center;
     align-self: center;
+    margin-bottom: 18px;
   }
   .contact-row {
     justify-content: center;
+    margin-bottom: 20px;
+  }
+  .connect-logos {
+    gap: 20px;
+  }
+}
+
+/* PHONE RESPONSIVE */
+@media (max-width: 600px) {
+  .contact-container {
+    margin: 22px;    /* Top-right-bottom-left margins */
+    padding: 1em 5vw;               /* Add inner horizontal padding so content never touches the border */
+    width: auto;                    /* Let margins/paddings control width */
+    max-width: none;                /* Remove any limiting */
+    min-width: 0;
+    border-radius: 12px;
+    gap: 10px;
+    box-sizing: border-box;
+  }
+  .contact-title {
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+  }
+  .contact-info,
+  .connect {
+    margin: 6px 0;
+    padding: 0;
+    width: 100%;
+  }
+  .contact-info h2,
+  .connect h2 {
+    font-size: 1.2rem;
+    margin-bottom: 17px;
+    margin-top: 1px;
+
+  }
+  .contact-row {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 14px;
+    gap: 5px;
+  }
+  .contact-logo {
+    width: 36px;
+    height: 36px;
+    font-size: 1.25em;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+  .contact-label {
+    font-size: 1em;
+  }
+  .contact-detail {
+    font-size: 0.97rem;
+  }
+  .connect-logos {
+    gap: 12px;
+    margin-top: 0.3em;
+    flex-wrap: wrap;
+  }
+  .connect-logo {
+    width: 36px;
+    height: 36px;
+    font-size: 1.15em;
   }
 }

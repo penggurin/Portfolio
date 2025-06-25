@@ -94,3 +94,33 @@ onresize = (event) => {
   system.size = { x: window.innerWidth, y: window.innerHeight }
   system.init()
 };
+
+// Place this after your navbar HTML or in your main JS bundle
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.navbar-hamburger');
+  const links = document.querySelector('.navbar-links');
+  if (!hamburger || !links) return;
+
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('open');
+    links.classList.toggle('show');
+  });
+
+  // Optional: close menu when clicking a link (for single-page apps)
+  links.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      links.classList.remove('show');
+    });
+  });
+
+  // Optional: close menu on outside click
+  document.addEventListener('click', function(e) {
+    if (window.innerWidth > 700) return;
+    if (!hamburger.contains(e.target) && !links.contains(e.target)) {
+      hamburger.classList.remove('open');
+      links.classList.remove('show');
+    }
+  });
+});
+

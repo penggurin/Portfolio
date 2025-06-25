@@ -1,4 +1,8 @@
 .about-section {
+  transform: scale(0.9);
+  transform-origin: top center;
+}
+.about-section {
   width: 92%;
   max-width: 1200px;
   margin: 100px auto;
@@ -98,11 +102,10 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin: 20px;
   padding: 1.5em 1.5em;
   margin-bottom: 2em;
   width: 100%;
-  margin: 0;
+  /* Remove conflicting margin and width */
 }
 
 #education{
@@ -146,4 +149,16 @@
   font-size: 1.2em;
 }
 
-/* Responsive changes at 1120px and below
+@media (max-width: 1120px) {
+  .about-cards-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+  .about-info-card {
+    width: 100%;
+    margin: 0 0 18px 0; /* Only bottom margin for spacing */
+    padding: 1.1em 0.8em;
+    max-width: 100%;
+  }
+}
