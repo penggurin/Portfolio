@@ -1,8 +1,4 @@
 .about-section {
-  transform: scale(0.9);
-  transform-origin: top center;
-}
-.about-section {
   width: 92%;
   max-width: 1200px;
   margin: 100px auto;
@@ -158,7 +154,7 @@
   .about-info-card {
     width: 100%;
     margin: 0 0 18px 0; /* Only bottom margin for spacing */
-    padding: 1.1em 0.8em;
+    padding: 1.1em 2em;
     max-width: 100%;
   }
 }
