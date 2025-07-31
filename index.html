@@ -7,207 +7,202 @@
   <title>Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
-
   <link href="https://fonts.googleapis.com/css?family=Poppins:700,400&display=swap" rel="stylesheet">
   <link rel="icon" href="logo-white.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body {
+      background-color: black;
+      font-family: 'Poppins', sans-serif;
+    }
+    @import "tailwindcss";
+  </style>
 </head>
 
 <body>
+  <canvas id="container" class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
 
-      <canvas id="container" class="fixed -z-10"></canvas>
-
-    <nav class="bg-zinc-900 sticky top-0 left-0 w-full shadow-lg bg-transparent backdrop-brightness-50">
-    <div class="flex justify-between items-center max-w-6xl mx-auto px-8 lg:px-24 py-2 ">
-      <a class="flex justify-center items-center" href="/">
+  <!-- Navbar -->
+  <nav class="bg-zinc-900/70 sticky top-0 left-0 w-full shadow-lg backdrop-blur-md z-50">
+    <div class="flex justify-between items-center max-w-6xl mx-auto px-6 lg:px-24 py-2">
+      <a class="flex items-center" href="/">
         <img src="logo-white.png" alt="Logo" class="h-11 w-11">
         <span class="text-white font-bold text-xl ml-2">Jp Roxas</span>
       </a>
-      <ul class="text-white flex gap-8 font-semibold">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <ul class="hidden md:flex text-white gap-8 font-semibold">
+        <li><a href="#home" class="hover:text-cyan-400">Home</a></li>
+        <li><a href="#about" class="hover:text-cyan-400">About</a></li>
+        <li><a href="#projects" class="hover:text-cyan-400">Projects</a></li>
+        <li><a href="#contact" class="hover:text-cyan-400">Contact</a></li>
+      </ul>
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
+      <ul class="flex flex-col text-white gap-4 font-semibold">
+        <li><a href="#home" class="hover:text-cyan-400 block">Home</a></li>
+        <li><a href="#about" class="hover:text-cyan-400 block">About</a></li>
+        <li><a href="#projects" class="hover:text-cyan-400 block">Projects</a></li>
+        <li><a href="#contact" class="hover:text-cyan-400 block">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <div class="max-w-6xl mx-auto px-8 lg:px-24 py-12 sm:py-16  flex flex-col items-center gap-[100px]" id="home">
-    <header class="bg-black flex justify-center w-full  gap-8 flex-wrap">
-      <div class="flex items-center mr-9">
-        <img src="main.jpg" class="h-[350px] w-[250px] rounded-full object-cover shadow-lg shadow-white/70">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-24 py-12 sm:py-16 flex flex-col items-center gap-24" id="home">
+    <!-- Hero -->
+    <header class="bg-black flex flex-col lg:flex-row justify-center items-center w-full gap-8">
+      <div class="flex-shrink-0 mb-6 lg:mb-0">
+        <img src="main.jpg" class="h-48 w-48 sm:h-64 sm:w-64 md:h-[350px] md:w-[250px] rounded-full object-cover shadow-lg shadow-white/70 mx-auto" alt="Profile">
       </div>
-      <div class="flex flex-col justify-center items-center">
+      <div class="flex flex-col justify-center items-center text-center">
         <h2 class="text-2xl text-white font-bold">Hello, I'm</h2>
         <h2 class="text-5xl text-white font-bold py-3">Jp Roxas</h2>
-        <h3 class="text-sm text-gray-400 font-bold "><i class="fa-solid fa-location-dot"></i> Quezon City, Philippines
+        <h3 class="text-sm text-gray-400 font-bold flex items-center justify-center gap-2">
+          <i class="fa-solid fa-location-dot"></i> Quezon City, Philippines
         </h3>
-
-        <div class=" text-white flex gap-5 font-bold pt-5">
-          <button
-            class="text-sm border-2 border-white py-1 rounded-3xl w-[120px] hover:bg-white hover:text-black ">Resume/CV</button>
-          <button
-            class="text-sm border-2 border-white py-1 rounded-3xl w-[120px] hover:bg-white hover:text-black">Contact</button>
-          <button
-            class="text-sm border-2 border-white py-1 rounded-3xl w-[120px] hover:bg-white hover:text-black">Projects</button>
+        <div class="text-white flex flex-wrap gap-4 font-bold pt-5 justify-center">
+          <a href="#" class="text-sm border-2 border-white py-1 px-4 rounded-3xl hover:bg-white hover:text-black transition">Resume/CV</a>
+          <a href="#contact" class="text-sm border-2 border-white py-1 px-4 rounded-3xl hover:bg-white hover:text-black transition">Contact</a>
+          <a href="#projects" class="text-sm border-2 border-white py-1 px-4 rounded-3xl hover:bg-white hover:text-black transition">Projects</a>
         </div>
       </div>
     </header>
 
-
-    <div class="bg-black flex justify-center w-full  gap-8 flex-wrap scroll-mt-20" id="about" >
+    <!-- About -->
+    <section class="bg-black flex flex-col w-full gap-8 scroll-mt-20 items-center" id="about">
       <h1 class="text-white text-2xl text-center font-semibold">About</h1>
-      <div class="bg-zinc-900 p-9 pb-5 text-center rounded-2xl border border-neutral-700 hover:scale-105 transition-all duration-300">
-        <p class="text-gray-400 ">
+      <div class="flex flex-col md:flex-row justify-around flex-wrap bg-zinc-900 p-6 sm:p-9 rounded-2xl border gap-9 border-neutral-700 hover:scale-105 transition-all duration-300">
+        <p class="text-gray-400 text-center">
           Hi! I am <b class="text-white">Jean Piere Roxas</b> from <b class="text-white">Quezon City, Philippines</b>.
-          I'm a <b class="text-white">second-year Computer Science</b> student at <b class="text-white">Quezon City
-            University – San Bartolome Campus</b>. With <b class="text-white">under a year of coding experience</b>, I
-          focus on building practical skills in <b class="text-white">Java, HTML, CSS, and JavaScript</b>. I'm
-          passionate about software development and eager to grow through hands-on projects and continuous learning.
+          I'm a <b class="text-white">second-year Computer Science</b> student at <b class="text-white">Quezon City University – San Bartolome Campus</b>.
+          With <b class="text-white">under a year of coding experience</b>, I focus on building practical skills in <b class="text-white">Java, HTML, CSS, and JavaScript</b>.
+          I'm passionate about software development and eager to grow through hands-on projects and continuous learning.
         </p>
         <div>
-          <div>
-            <h2 class="text-white text-lg font-semibold text-center pt-9 pb-1 bg-gradient-">Tech Stacks</h2>
-            <div class="flex text-white justify-center  text-2x1 flex-wrap font-semibold">
-              <span
-                class="flex bg-zinc-900 0 rounded-2xl p-2 gap-2 border border-neutral-700 m-3 px-5 *:justify-center w-fit hover:scale-110">
-                <span>
-                  <div><i class="fa-brands fa-html5 text-white"></i></div>
-                </span>HTML
-              </span>
-              <span
-                class="flex bg-zinc-900 rounded-2xl p-2 gap-2 border border-neutral-700 m-3 px-5 *:justify-center w-fit hover:scale-110">
-                <span>
-                  <div><i class="fa-brands fa-css3-alt  text-white"></i></div>
-                </span>CSS
-              </span>
-              <span
-                class="flex bg-zinc-900 rounded-2xl p-2 gap-2 border border-neutral-700 m-3 px-5 *:justify-center w-fit hover:scale-110">
-                <span>
-                  <div><i class="fab fa-js  text-white"></i></div>
-                </span>JavaScript
-              </span>
-              <span
-                class="flex bg-zinc-900 rounded-2xl p-2 gap-2 border border-neutral-700 m-3 px-5 *:justify-center w-fit hover:scale-110">
-                <span>
-                  <div><i class="fab fa-github text-white"></i></div>
-                </span>GitHub
-              </span>
-              <span
-                class="flex bg-zinc-900 rounded-2xl p-2 gap-2 border border-neutral-700 m-3 px-5 *:justify-center w-fit hover:scale-110">
-                <span>
-                  <div><i class="fab fa-java text-white"></i></div>
-                </span>Java
-              </span>
-              <span
-                class="flex bg-zinc-900 rounded-2xl p-2 gap-2 border border-neutral-700 m-3 px-5 *:justify-center w-fit hover:scale-110">
-                <span>
-                  <div class="w-5 h-5 flex"><img src="https://img.icons8.com/m_rounded/512/FFFFFF/tailwind_css.png">
-                  </div>
-                </span>
-                Tailwind
-              </span>
-            </div>
+          <h2 class="text-white text-lg font-semibold text-center pt-9 pb-1">Tech Stacks</h2>
+          <div class="flex flex-wrap justify-center gap-4 mt-2 text-white">
+            <span class="flex items-center bg-zinc-800 rounded-2xl p-2 gap-2 border border-neutral-700 hover:scale-110 transition px-5">
+              <i class="fa-brands fa-html5 "></i> HTML
+            </span>
+            <span class="flex items-center bg-zinc-800 rounded-2xl p-2 gap-2 border border-neutral-700 hover:scale-110 transition px-5">
+              <i class="fa-brands fa-css3-alt "></i> CSS
+            </span>
+            <span class="flex items-center bg-zinc-800 rounded-2xl p-2 gap-2 border border-neutral-700 hover:scale-110 transition px-5">
+              <i class="fab fa-js "></i> JavaScript
+            </span>
+            <span class="flex items-center bg-zinc-800 rounded-2xl p-2 gap-2 border border-neutral-700 hover:scale-110 transition px-5">
+              <i class="fab fa-github "></i> GitHub
+            </span>
+            <span class="flex items-center bg-zinc-800 rounded-2xl p-2 gap-2 border border-neutral-700 hover:scale-110 transition px-5">
+              <i class="fab fa-java "></i> Java
+            </span>
+            <span class="flex items-center bg-zinc-800 rounded-2xl p-2 gap-2 border border-neutral-700 hover:scale-110 transition px-5">
+              <img src="https://img.icons8.com/m_rounded/512/FFFFFF/tailwind_css.png" class="w-5 h-5" alt="Tailwind"> Tailwind
+            </span>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="bg-black flex justify-center w-full flex-col gap-8 scroll-mt-20" id="projects">
+    <!-- Projects -->
+    <section class="bg-black flex flex-col w-full gap-8 scroll-mt-20" id="projects">
       <h1 class="text-white text-2xl text-center font-semibold">Projects</h1>
-      <div class="flex gap-6 justify-between">
-        <div class="bg-zinc-900  rounded-2xl border border-neutral-700 w-1/3 hover:resize-y-2 hover:scale-105 transition-all duration-300">
+      <div class="flex flex-col md:flex-row gap-6">
+        <!-- Card -->
+        <div class="bg-zinc-900 rounded-2xl border border-neutral-700 flex-1 hover:scale-105 transition-all duration-300 min-w-[220px]">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9UIOv9qRinRWGHhoxyVOBjiQQz6YrXaM8Xg&s"
-            alt="tae" class="rounded-t-2xl">
+            alt="Project 1" class="rounded-t-2xl w-full h-40 object-cover">
           <div class="p-3">
-            <div class=" text-white gap-3 font-bold pt-3 pb-3 text-center flex justify-start">
-              <h2 class="text-[0.80em] bg-zinc-900 border border-neutral-700 py-1 rounded-[10px] w-[50px]">HTML</h2>
-              <h2 class="text-[0.80em] bg-zinc-900 border border-neutral-700 py-1 rounded-[10px] w-[50px]">CSS</h2>
-              <h2 class="text-[0.80em] bg-zinc-900 border border-neutral-700 py-1 rounded-[10px] w-[50px]">JS</h2>
+            <div class="text-white gap-3 font-bold pt-3 pb-3 flex flex-wrap justify-start">
+              <span class="text-[0.80em] bg-zinc-800 border border-neutral-700 py-1 px-3 rounded-[10px]">HTML</span>
+              <span class="text-[0.80em] bg-zinc-800 border border-neutral-700 py-1 px-3 rounded-[10px]">CSS</span>
+              <span class="text-[0.80em] bg-zinc-800 border border-neutral-700 py-1 px-3 rounded-[10px]">JS</span>
             </div>
-            <h1 class="text-white font-bold flex justify-start text-lg pb-2">Project 1</h1>
+            <h1 class="text-white font-bold text-lg pb-2">Project 1</h1>
             <p class="text-zinc-400 text-start">Here I will put a short description about my first project.</p>
-            <div class="text-white relative pt-5 text-sm flex gap-3">
-              <span><i class="fab fa-github"></i></span>
-              <span>🔗</span>
+            <div class="text-white pt-5 text-sm flex gap-3">
+              <a href="#" class="hover:text-cyan-400"><i class="fab fa-github"></i></a>
+              <a href="#" class="hover:text-cyan-400">🔗</a>
             </div>
           </div>
         </div>
-        <div class="bg-zinc-900  rounded-2xl border border-neutral-700 w-1/3 hover:scale-105 transition-all duration-300">
+        <!-- Card -->
+        <div class="bg-zinc-900 rounded-2xl border border-neutral-700 flex-1 hover:scale-105 transition-all duration-300 min-w-[220px]">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9UIOv9qRinRWGHhoxyVOBjiQQz6YrXaM8Xg&s"
-            alt="tae" class="rounded-t-2xl">
+            alt="Project 2" class="rounded-t-2xl w-full h-40 object-cover">
           <div class="p-3">
-            <div class=" text-white gap-3 font-bold pt-3 pb-3 text-center flex justify-start">
-              <h2 class="text-[0.80em] bg-zinc-900 border border-neutral-700 py-1 rounded-[10px] w-[50px]">HTML</h2>
-              <h2 class="text-[0.80em] bg-zinc-900 border border-neutral-700 py-1 rounded-[10px] w-[50px]">CSS</h2>
-              <h2 class="text-[0.80em] bg-zinc-900 border border-neutral-700 py-1 rounded-[10px] w-[50px]">JS</h2>
+            <div class="text-white gap-3 font-bold pt-3 pb-3 flex flex-wrap justify-start">
+              <span class="text-[0.80em] bg-zinc-800 border border-neutral-700 py-1 px-3 rounded-[10px]">HTML</span>
+              <span class="text-[0.80em] bg-zinc-800 border border-neutral-700 py-1 px-3 rounded-[10px]">CSS</span>
+              <span class="text-[0.80em] bg-zinc-800 border border-neutral-700 py-1 px-3 rounded-[10px]">JS</span>
             </div>
-            <h1 class="text-white font-bold flex justify-start text-lg pb-2">Project 2</h1>
+            <h1 class="text-white font-bold text-lg pb-2">Project 2</h1>
             <p class="text-zinc-400 text-start">Here I will put a short description about my first project.</p>
-            <div class="text-white relative pt-5 text-sm flex gap-3">
-              <span><i class="fab fa-github"></i></span>
-              <span>🔗</span>
+            <div class="text-white pt-5 text-sm flex gap-3">
+              <a href="#" class="hover:text-cyan-400"><i class="fab fa-github"></i></a>
+              <a href="#" class="hover:text-cyan-400">🔗</a>
             </div>
           </div>
         </div>
-        <div class="bg-zinc-900  rounded-2xl border border-neutral-700 w-1/3 hover:scale-105 transition-all duration-300">
+        <!-- Card -->
+        <div class="bg-zinc-900 rounded-2xl border border-neutral-700 flex-1 hover:scale-105 transition-all duration-300 min-w-[220px]">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9UIOv9qRinRWGHhoxyVOBjiQQz6YrXaM8Xg&s"
-            alt="tae" class="rounded-t-2xl">
+            alt="Project 3" class="rounded-t-2xl w-full h-40 object-cover">
           <div class="p-3">
-            <div class=" text-white gap-3 font-bold pt-3 pb-3 text-center flex justify-start">
-              <h2 class="text-[0.80em] bg-zinc-900 border border-neutral-700 py-1 rounded-[10px] w-[50px]">HTML</h2>
-              <h2 class="text-[0.80em] bg-zinc-900 border border-neutral-700 py-1 rounded-[10px] w-[50px]">CSS</h2>
-              <h2 class="text-[0.80em] bg-zinc-900 border border-neutral-700 py-1 rounded-[10px] w-[50px]">JS</h2>
+            <div class="text-white gap-3 font-bold pt-3 pb-3 flex flex-wrap justify-start">
+              <span class="text-[0.80em] bg-zinc-800 border border-neutral-700 py-1 px-3 rounded-[10px]">HTML</span>
+              <span class="text-[0.80em] bg-zinc-800 border border-neutral-700 py-1 px-3 rounded-[10px]">CSS</span>
+              <span class="text-[0.80em] bg-zinc-800 border border-neutral-700 py-1 px-3 rounded-[10px]">JS</span>
             </div>
-            <h1 class="text-white font-bold flex justify-start text-lg pb-2">Project 3</h1>
+            <h1 class="text-white font-bold text-lg pb-2">Project 3</h1>
             <p class="text-zinc-400 text-start">Here I will put a short description about my first project.</p>
-            <div class="text-white relative pt-5 text-sm flex gap-3">
-              <span><i class="fab fa-github"></i></span>
-              <span>🔗</span>
+            <div class="text-white pt-5 text-sm flex gap-3">
+              <a href="#" class="hover:text-cyan-400"><i class="fab fa-github"></i></a>
+              <a href="#" class="hover:text-cyan-400">🔗</a>
             </div>
           </div>
         </div>
-
       </div>
-    </div>
+    </section>
 
-    <div class="bg-black flex justify-center w-full flex-col gap-8 scroll-mt-20" id="contact">
+    <!-- Contact -->
+    <section class="bg-black flex flex-col w-full gap-8 scroll-mt-20" id="contact">
       <h1 class="text-white text-2xl text-center font-semibold">Get in Touch</h1>
-      <div class="flex justify-around flex-wrap bg-zinc-900 p-9  text-center rounded-2xl border gap-9 border-neutral-700 hover:scale-105 transition-all duration-300">
-        <div class="gap-3 flex flex-col">
-          <h1 class="text-white text-lg font-semibold text-center">Contact Information</h1>
+      <div class="flex flex-col md:flex-row justify-around flex-wrap bg-zinc-900 p-6 sm:p-9 rounded-2xl border gap-9 border-neutral-700 hover:scale-105 transition-all duration-300">
+        <div class="gap-3 flex flex-col items-center md:items-start">
+          <h1 class="text-white text-lg font-semibold text-center md:text-left">Contact Information</h1>
           <div class="flex items-center">
-            <i class="fas fa-envelope text-white p-3 bg-zinc-400 rounded-full h-10 w-10"></i>
+            <i class="fas fa-envelope text-white p-3 bg-zinc-400 rounded-full h-10 w-10 flex items-center justify-center"></i>
             <span class="text-zinc-400 ml-2">roxas.jeanpiere.ramos@gmail.com</span>
           </div>
           <div class="flex items-center">
-            <i class="fas fa-phone text-white p-3 bg-zinc-400 rounded-full h-10 w-10"></i>
+            <i class="fas fa-phone text-white p-3 bg-zinc-400 rounded-full h-10 w-10 flex items-center justify-center"></i>
             <span class="text-zinc-400 ml-2">0977 738 5081</span>
           </div>
           <div class="flex items-center">
-            <i class="fas fa-map-marker-alt text-white p-3 bg-zinc-400 rounded-full h-10 w-10"></i>
+            <i class="fas fa-map-marker-alt text-white p-3 bg-zinc-400 rounded-full h-10 w-10 flex items-center justify-center"></i>
             <span class="text-zinc-400 ml-2">Quezon City, Philippines</span>
           </div>
         </div>
-
-        <div class="flex flex-col justify-center">
-            <h1 class="text-white text-lg font-semibold text-center">Connect With Me</h1>
-                <div class="text-white flex gap-5 font-bold pt-5 justify-center text-2xl">
-          <a href="https://github.com/penggurin" target="_blank" ><i class="fab fa-github p-3 bg-zinc-400 h-12 w-12 rounded-full"></i></a>
-          <a href="https://www.linkedin.com/in/jean-piere-roxas-946863335/" target="_blank" ><i class="fab fa-linkedin-in p-3 bg-zinc-400 h-12 w-12 rounded-full"></i></a>
-          <a href="https://www.facebook.com/jp.roxas.740281/" target="_blank" ><i class="fab fa-facebook-f p-3 bg-zinc-400 h-12 w-12 rounded-full"></i></a>
-          <a href="https://www.instagram.com/roxas__jp/" target="_blank" ><i class="fab fa-instagram p-3 bg-zinc-400 h-12 w-12 rounded-full"></i></a>
-        </div>
+        <div class="flex flex-col justify-center items-center">
+          <h1 class="text-white text-lg font-semibold text-center">Connect With Me</h1>
+          <div class="text-white flex gap-5 font-bold pt-5 justify-center text-2xl">
+            <a href="https://github.com/penggurin" target="_blank"><i class="fab fa-github p-3 bg-zinc-400 h-12 w-12 rounded-full"></i></a>
+            <a href="https://www.linkedin.com/in/jean-piere-roxas-946863335/" target="_blank"><i class="fab fa-linkedin-in p-3 bg-zinc-400 h-12 w-12 rounded-full"></i></a>
+            <a href="https://www.facebook.com/jp.roxas.740281/" target="_blank"><i class="fab fa-facebook-f p-3 bg-zinc-400 h-12 w-12 rounded-full"></i></a>
+            <a href="https://www.instagram.com/roxas__jp/" target="_blank"><i class="fab fa-instagram p-3 bg-zinc-400 h-12 w-12 rounded-full"></i></a>
           </div>
+        </div>
       </div>
-    </div>
-
-
+    </section>
   </div>
 
-  <footer class="bg-zinc-900 text-white text-center py-6">
+  <footer class="bg-zinc-900 text-white text-center py-6 mt-16">
     <div class="container mx-auto">
-      <div class="text-sm">
+      <div class="text-sm flex items-center justify-center gap-2">
         <i class="fas fa-code"></i>
         <span>Jp Roxas</span>
       </div>
@@ -215,17 +210,22 @@
         © 2025 Jp Roxas. All rights reserved.
       </p>
     </div>
-
   </footer>
-  <style>
-    
-    body {
-      background-color: black;
-      font-family: 'Poppins', sans-serif;
-    }
-    @import "tailwindcss";
-  </style>
 
+  <!-- Responsive Mobile Navbar Script -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    // Close mobile menu on link click
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+  </script>
+
+  <!-- Particle Effect Script (unchanged) -->
   <script>
 class Particle {
     parent;
@@ -304,20 +304,22 @@ class ParticleSystem {
     }
 }
 
-        const canvas = document.getElementById('container')
-        canvas.width = window.innerWidth
-        canvas.height = window.innerHeight
-        const system = new ParticleSystem(canvas, { x: window.innerWidth, y: window.innerHeight })
-        system.ammount = 100
-        system.diameter = { min: 1, max: 2 }
-        system.life = { min: 15, max: 20 }
-        system.speed = { x: { min: -10, max: 10 }, y: { min: -10, max: 10 } }
-        system.init()
+    const canvas = document.getElementById('container')
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+    const system = new ParticleSystem(canvas, { x: window.innerWidth, y: window.innerHeight })
+    system.ammount = 100
+    system.diameter = { min: 1, max: 2 }
+    system.life = { min: 15, max: 20 }
+    system.speed = { x: { min: -10, max: 10 }, y: { min: -10, max: 10 } }
+    system.init()
 
-onresize = (event) => {
-  system.size = { x: window.innerWidth, y: window.innerHeight }
-  system.init()
-};
-   </script> 
+    window.onresize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      system.size = { x: window.innerWidth, y: window.innerHeight }
+      // There's no need to call system.init() again since it will already create new particles and handle resizing.
+    };
+  </script>
 </body>
 </html>
